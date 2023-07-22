@@ -1,0 +1,40 @@
+.filmes {
+    padding: 5.6vw;
+    max-height: 90vh;
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+        margin-top: 24px;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        &__item {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 32px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                max-height: 80vh; 
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
