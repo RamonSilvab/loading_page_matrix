@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
+    const extras = document.querySelectorAll('[data-accordion-extras]');
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao) {
@@ -10,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
             removeBotaoAtivo();
             botao.target.classList.add('shows__tabs__buttons--is--active');
         })
+    }
+
+    for (let i = 0; i < extras.length; i++) {
+        extras[i].addEventListener('click', abreOuFechaResposta);
     }
 })
 
@@ -27,4 +32,9 @@ function escondeTodasAbas() {
     for (let i = 0; i < tabsContainer.length; i++) {
         tabsContainer[i].classList.remove('shows__list--is--active');
     }
+}
+
+function abreOuFechaResposta(event) {
+    const elementoPai = event.currentTarget;
+    elementoPai.classList.toggle('extras__list__item--is--open');
 }

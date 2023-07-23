@@ -4,10 +4,6 @@
     padding: 5.6vw;
     min-height: 50vh;
 
-    @media (max-width: 767px) {
-        min-height: 100vh;
-    }
-
     @media (max-width: 1023px) {
         min-height: 50vh;
     }
@@ -67,8 +63,12 @@
                 letter-spacing: 2px;
 
                 @media (max-width: 767px) {
+                    max-height: 400px;
+                    overflow: auto;
+                    justify-content: center;
                     font-size: 14px;
                     margin-top: 0;
+                    padding-right: 16px;
                 }
             }
         }

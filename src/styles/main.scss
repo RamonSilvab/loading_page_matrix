@@ -27,23 +27,21 @@ body {
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
     color: variaveis.$corTextoPrincipal;
-    text-align: center;
     letter-spacing: 2px;
     font-weight: 400;
 }
 
 .title--big {
     @include title(46px);
-    
 }
 
 .title {
     @include title;
+    text-align: center;
 }
 
 .title--small {
     @include title(28px);
-    margin-bottom: 16px;
 }
 
 .text--big {
@@ -58,6 +56,10 @@ body {
     @include text(12px);
     color: variaveis.$corTextoSecundario;
     font-family:'Roboto', sans-serif;
+}
+
+.text--strog {
+    color: variaveis.$corTextoSecundario;
 }
 
 .button--primary {
@@ -103,7 +105,6 @@ body {
             @include text(14px);
             color: variaveis.$corTextoSecundario;
             font-family: 'Roboto', sans-serif;
-
 
             img{
                 width: 16px;
