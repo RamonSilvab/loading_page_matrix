@@ -37,7 +37,6 @@ body {
 
 .title {
     @include title;
-    text-align: center;
 }
 
 .title--small {
@@ -96,9 +95,14 @@ body {
 }
 
 .text-section {
+    margin-top: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 26px;
+
+    @media (max-width: 767px) {
+        margin-top: 0;
+    }
 
     &__list{
         &__item{
