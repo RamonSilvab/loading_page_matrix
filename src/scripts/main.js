@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const extras = document.querySelectorAll('[data-accordion-extras]');
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+    ocultaElementosDoHeader();
+
+    window.addEventListener('scroll', function () {
+
+        const posiçaoAtual = window.scrollY;
+        
+
+        if (posiçaoAtual < alturaHero) {
+            ocultaElementosDoHeader();
+        } else {
+            exibeElemtnosDoHeader();
+        }
+    })
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao) {
@@ -37,4 +52,16 @@ function escondeTodasAbas() {
 function abreOuFechaResposta(event) {
     const elementoPai = event.currentTarget;
     elementoPai.classList.toggle('extras__list__item--is--open');
+}
+
+function ocultaElementosDoHeader() {
+    const header = document.querySelector('header');
+
+    header.classList.add('header--is--hidden');
+}
+
+function exibeElemtnosDoHeader() {
+    const header = document.querySelector('header');
+
+    header.classList.remove('header--is--hidden');
 }

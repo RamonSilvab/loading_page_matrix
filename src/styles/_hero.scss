@@ -6,10 +6,12 @@
     background-position: right top;
     min-height: 90vh;
     position: relative;
+    margin-top: -90px;
 
     @media (max-width: 767px) {
         background-image: url('../../dist/images/hero-cel.png');
         min-height: 100vh;
+        margin-top: -60px;
     }
 
     @media (max-width: 1023px) {
