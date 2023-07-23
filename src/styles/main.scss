@@ -2,12 +2,15 @@
 @use 'hero';
 @use 'shows';
 @use 'filmes';
+@use 'extras';
+@use 'footer';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bebas Neue', sans-serif;
+    list-style: none;
 }
 
 body {
@@ -17,7 +20,7 @@ body {
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
-    line-height: $fontSize + 15px;
+    line-height: $fontSize + 16px;
     color: variaveis.$corTextoPrincipal;
 }
 
@@ -40,6 +43,7 @@ body {
 
 .title--small {
     @include title(28px);
+    margin-bottom: 16px;
 }
 
 .text--big {
@@ -52,6 +56,8 @@ body {
 
 .text--small {
     @include text(12px);
+    color: variaveis.$corTextoSecundario;
+    font-family:'Roboto', sans-serif;
 }
 
 .button--primary {
@@ -79,11 +85,30 @@ body {
         margin-top: 32px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
         max-width: none;
         width: 50%;
         letter-spacing: 1.1px;
         margin-top: 32px;
+    }
+}
+
+.text-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+
+    &__list{
+        &__item{
+            @include text(14px);
+            color: variaveis.$corTextoSecundario;
+            font-family: 'Roboto', sans-serif;
+
+
+            img{
+                width: 16px;
+            }
+        }
     }
 }
 

@@ -1,6 +1,10 @@
 .filmes {
     padding: 5.6vw;
-    max-height: 90vh;
+    min-height: 90vh;
+
+    @media (max-width: 767px) {
+        max-height: none;
+    }
 
     &__list{
         display: grid;
@@ -12,7 +16,7 @@
             display: block;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1023px) {
             grid-template-columns: 1fr 1fr;
 
         }

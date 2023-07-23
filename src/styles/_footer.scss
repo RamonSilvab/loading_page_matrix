@@ -1,0 +1,39 @@
+.footer {
+    padding: 0 5.6vw 20px;
+    margin-top: 30vh;
+
+    @media (max-width: 767px) {
+        margin-top: 10vh;
+    }
+
+    @media (max-width: 1023px) {
+        margin-top: 10vh;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        
+        &__item {
+            margin-right: 40px;
+            
+            @media (max-width: 767px) {
+                margin-bottom: 16px;
+            }
+            
+            img{
+                width: 16px;
+            }
+        }
+    }
+}
