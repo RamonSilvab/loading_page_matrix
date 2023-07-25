@@ -4,17 +4,8 @@
     padding: 5.6vw;
     min-height: 50vh;
 
-    @media (max-width: 1023px) {
-        min-height: 50vh;
-    }
-
     &__tabs {
         text-align: center;
-        
-        @media (max-width: 767px) {
-            display: flex;
-            justify-content: space-evenly;
-        }
 
         &__buttons {
             color: variaveis.$corTextoPrincipal;
@@ -28,10 +19,6 @@
 
             &--is--active {
                 border-color: variaveis.$corBotaoAtivo;
-            }
-
-            @media (max-width: 767px) {
-                font-size: 24px;
             }
         }
     }
@@ -61,8 +48,26 @@
                 text-align: justify;
                 padding-bottom: 16px;
                 letter-spacing: 2px;
+            }
+        }
+    }
 
-                @media (max-width: 767px) {
+    @media (max-width: 767px) {
+
+        &__tabs {
+            display: flex;
+            justify-content: space-evenly;
+
+            &__buttons {
+                font-size: 24px;
+            }
+        }
+
+        &__list {
+
+            &__item {
+
+                p {
                     max-height: 400px;
                     overflow: auto;
                     justify-content: center;
@@ -72,6 +77,10 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 1023px) {
+        min-height: 50vh;
     }
 }
 

@@ -8,17 +8,6 @@
     position: relative;
     margin-top: -90px;
 
-    @media (max-width: 767px) {
-        background-image: url('../../dist/images/hero-cel.png');
-        min-height: 100vh;
-        margin-top: -60px;
-    }
-
-    @media (max-width: 1023px) {
-        background-image: url('../../dist/images/hero-cel.png');
-        min-height: 100vh;
-    }
-
     &::before {
         position: absolute;
         top: 0;
@@ -42,8 +31,14 @@
         img {
             width: 30%;
         }
+    }
 
-        @media (max-width: 767px) {
+    @media (max-width: 767px) {
+        background-image: url('../../dist/images/hero-cel.png');
+        min-height: 100vh;
+        margin-top: -60px;
+
+        &__branding {
             padding-left: 0;
             align-items: center;
 
@@ -55,8 +50,13 @@
                 width: 80%;
             }
         }
+    }
 
-        @media (max-width: 1023px) {
+    @media (max-width: 1023px) {
+        background-image: url('../../dist/images/hero-cel.png');
+        min-height: 100vh;
+
+        &__branding {
             padding-left: 0;
             align-items: center;
 

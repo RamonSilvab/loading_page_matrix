@@ -13,7 +13,6 @@
         transition: background-color .5s ease;
 
         .header {
-
             &__logo, &__links__item:first-child {
                 opacity: 0;
                 visibility: hidden;
@@ -28,10 +27,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @media (max-width: 768px) {
-            padding: 0 12px 0 20px;
-        }
     }
 
     &__logo {
@@ -39,10 +34,6 @@
         width: 100%;
         margin: 5px;
         transition: opacity .5s ease;
-
-        @media (max-width: 767px) {
-            max-width: 130px;
-        }
     }
 
     &__links {
@@ -63,8 +54,18 @@
         padding: 8px 24px;
         border-radius: 5px;
         border: red solid 2px;
+    }
 
-        @media (max-width: 767px) {
+    @media (max-width: 767px) {
+        &__container {
+            padding: 0 12px 0 20px;
+        }
+
+        &__logo {
+            max-width: 130px;
+        }
+        
+        .button {
             font-size: 13px;
             height: 40px;
             letter-spacing: 0;
